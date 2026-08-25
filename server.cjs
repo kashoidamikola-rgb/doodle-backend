@@ -7,11 +7,8 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-// Pisteet tallennetaan palvelimen muistiin
-let scores = [
-  { username: 'Matti', score: 1500 },
-  { username: 'Maija', score: 1200 }
-];
+// Tuloslista aloitetaan täysin tyhjänä (Matti ja Maija poistettu)
+let scores = [];
 
 // Haetaan tulokset
 app.get('/api/scores', (req, res) => {
